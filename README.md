@@ -12,3 +12,4 @@ Note: when run via launchd, it does not report when zero conflicts are found, be
 The Growl notifications are 'sticky' but only one will appear at a time on the screen, so if you leave this running overnight you won't come back to 50 notices that a conflicted copy was found.
 
 
+
