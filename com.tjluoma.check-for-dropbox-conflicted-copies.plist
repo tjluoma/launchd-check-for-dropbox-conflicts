@@ -8,7 +8,7 @@
 	<string>com.tjluoma.check-for-dropbox-conflicted-copies</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/Users/luomat/Dropbox/txt/dropbox-launchd-conflicted-copy.sh</string>
+		<string>/usr/local/bin/dropbox-launchd-conflicted-copy.sh</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>

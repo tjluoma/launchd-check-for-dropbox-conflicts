@@ -11,5 +11,17 @@ Note: when run via launchd, it does not report when zero conflicts are found, be
 
 The Growl notifications are 'sticky' but only one will appear at a time on the screen, so if you leave this running overnight you won't come back to 50 notices that a conflicted copy was found.
 
+# Installation
+
+1.  Move **dropbox-launchd-conflicted-copy.sh** to /usr/local/bin/ and make sure it's executable.
+
+(You can actually install it anywhere, just make sure to edit the plist to point to the correct path.)
+
+2. Move **com.tjluoma.check-for-dropbox-conflicted-copies.plist** to ~/Library/LaunchAgents/ and then either run
+
+`launchctl load ~/Library/LaunchAgents/com.tjluoma.check-for-dropbox-conflicted-copies.plist`
+
+or log out and back in.
+
 
 
