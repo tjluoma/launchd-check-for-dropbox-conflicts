@@ -13,9 +13,7 @@ The Growl notifications are 'sticky' but only one will appear at a time on the s
 
 # Installation
 
-1.  Move **dropbox-launchd-conflicted-copy.sh** to /usr/local/bin/ and make sure it's executable.
-
-(You can actually install it anywhere, just make sure to edit the plist to point to the correct path.)
+1.  Move **dropbox-launchd-conflicted-copy.sh** to /usr/local/bin/ and make sure it's executable. (You can actually install it anywhere, just make sure to edit the plist to point to the correct path.)
 
 2. Move **com.tjluoma.check-for-dropbox-conflicted-copies.plist** to ~/Library/LaunchAgents/ and then either run
 
