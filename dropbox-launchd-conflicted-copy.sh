@@ -9,7 +9,7 @@
 NAME=`echo $0:t`
 
 	# change this if your Dropbox is somewhere else
-DIR=$HOME
+DIR=$HOME/Dropbox
 
 	# this will look for files with the name "'s conflicted copy YYYY-MM-DD" in it
 	# except this in the Trash or the .dropbox.cache folder.
