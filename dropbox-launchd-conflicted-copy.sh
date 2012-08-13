@@ -23,13 +23,12 @@ fi
 	# change this if your Dropbox is somewhere else (NOTE: yours is probably $HOME/Dropbox/ but mine is $HOME)
 DIR=$HOME
 
-
+	# this will look for files with the name "'s conflicted copy YYYY-MM-DD" in it
+	# except this in the Trash or the .dropbox.cache folder.
 DUPS=$(find "$DIR" -path "*(*'s conflicted copy [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]*" -print |\
 egrep -v "$DIR/.dropbox.cache|$HOME/.Trash/")
 
-	# this will look for files with the name "'s conflicted copy YYYY-MM-DD" in it
-	# except this in the Trash or the .dropbox.cache folder.
-	# then it will count the lines (wc) and get rid of anything except the
+	# this will count the number of lines (wc) and get rid of anything except the
 	# number (tr) since 'wc' inexplicably adds blank spaces before its output.
 COUNT=$(echo "$DUPS"| wc -l | tr -dc '[0-9]')
 
