@@ -20,7 +20,7 @@ then
 fi
 
 
-	# change this if your Dropbox is somewhere else (NOTE: yours is probably $HOME/Dropbox/ but mine is $HOME)
+	# change this if your Dropbox is somewhere else (NOTE: yours is probably $HOME/Dropbox but mine is $HOME)
 DIR=$HOME
 
 	# this will look for files with the name "'s conflicted copy YYYY-MM-DD" in it
@@ -30,17 +30,30 @@ egrep -v "$DIR/.dropbox.cache|$HOME/.Trash/")
 
 	# this will count the number of lines (wc) and get rid of anything except the
 	# number (tr) since 'wc' inexplicably adds blank spaces before its output.
-COUNT=$(echo "$DUPS"| wc -l | tr -dc '[0-9]')
+
+if [[ "$DUPS" == "" ]]
+then
+	COUNT=0
+else
+	COUNT=$(echo "$DUPS"| wc -l | tr -dc '[0-9]')
+fi
 
 if [[ "$SHLVL" == "2" ]]
 then
 		# if Shell Level is 2 then this is being run in iTerm or Terminal.
 		# SHLVL is 1 for launchd
 		# so we just output the information and then exit
-	echo "$NAME: Number of Dropbox 'conflicted copy' files found: $COUNT"
-	echo "$DUPS"
-	exit 0
 
+		if [[ "$COUNT" == "0" ]]
+		then
+			echo "$NAME: No conflicts found"
+			exit 0
+
+		else
+			echo "$NAME: Number of Dropbox 'conflicted copy' files found: $COUNT"
+			echo "$DUPS"
+			exit 0
+		fi
 fi
 
 # if we get here, we are in launchd
