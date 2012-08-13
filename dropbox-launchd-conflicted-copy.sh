@@ -8,15 +8,30 @@
 
 NAME=`echo $0:t`
 
-	# change this if your Dropbox is somewhere else
-DIR=$HOME/Dropbox
+
+if ((! $+commands[growlnotify] ))
+then
+
+	# note: if growlnotify is a function or alias, it will come back not found
+
+	echo "$NAME: growlnotify is required but not found"
+	exit 1
+
+fi
+
+
+	# change this if your Dropbox is somewhere else (NOTE: yours is probably $HOME/Dropbox/ but mine is $HOME)
+DIR=$HOME
+
+
+DUPS=$(find "$DIR" -path "*(*'s conflicted copy [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]*" -print |\
+egrep -v "$DIR/.dropbox.cache|$HOME/.Trash/")
 
 	# this will look for files with the name "'s conflicted copy YYYY-MM-DD" in it
 	# except this in the Trash or the .dropbox.cache folder.
 	# then it will count the lines (wc) and get rid of anything except the
 	# number (tr) since 'wc' inexplicably adds blank spaces before its output.
-COUNT=$(find "$DIR" -path "*(*'s conflicted copy [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]*" -print |\
-egrep -v "$DIR/.dropbox.cache|$HOME/.Trash/" | wc -l | tr -dc '[0-9]')
+COUNT=$(echo "$DUPS"| wc -l | tr -dc '[0-9]')
 
 if [[ "$SHLVL" == "2" ]]
 then
@@ -24,6 +39,7 @@ then
 		# SHLVL is 1 for launchd
 		# so we just output the information and then exit
 	echo "$NAME: Number of Dropbox 'conflicted copy' files found: $COUNT"
+	echo "$DUPS"
 	exit 0
 
 fi
