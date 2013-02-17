@@ -20,8 +20,8 @@ then
 fi
 
 
-	# change this if your Dropbox is somewhere else (NOTE: yours is probably $HOME/Dropbox but mine is $HOME)
-DIR=$HOME
+	# change this if your Dropbox is somewhere else
+DIR="$HOME/Dropbox"
 
 	# this will look for files with the name "'s conflicted copy YYYY-MM-DD" in it
 	# except this in the Trash or the .dropbox.cache folder.
