@@ -2,25 +2,29 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-  <key>CompatibleVersion</key>
+	<key>CompatibleVersion</key>
 	<integer>1</integer>
 	<key>RawQuery</key>
-	<string>(true) &amp;&amp; ((((kMDItemDisplayName = "'s*"cdw) &amp;&amp; ((kMDItemDisplayName = "conflicted*"cdw) &amp;&amp; (kMDItemDisplayName = "copy*"cdw)))))</string>
+	<string>((kMDItemDisplayName = "\'s conflicted copy*"cdwt))</string>
 	<key>RawQueryDict</key>
 	<dict>
 		<key>FinderFilesOnly</key>
 		<true/>
 		<key>RawQuery</key>
-		<string>(true) &amp;&amp; ((((kMDItemDisplayName = "'s*"cdw) &amp;&amp; ((kMDItemDisplayName = "conflicted*"cdw) &amp;&amp; (kMDItemDisplayName = "copy*"cdw)))))</string>
+		<string>((kMDItemDisplayName = "\'s conflicted copy*"cdwt))</string>
 		<key>SearchScopes</key>
 		<array>
-			<string>kMDQueryScopeComputer</string>
+			<string>/Users/luomat/Dropbox</string>
 		</array>
 		<key>UserFilesOnly</key>
 		<true/>
 	</dict>
 	<key>SearchCriteria</key>
 	<dict>
+		<key>CurrentFolderPath</key>
+		<array>
+			<string>/Users/luomat/Dropbox</string>
+		</array>
 		<key>FXCriteriaSlices</key>
 		<array>
 			<dict>
@@ -61,10 +65,10 @@
 			</dict>
 		</array>
 		<key>FXScope</key>
-		<integer>1396925814</integer>
+		<integer>1396925286</integer>
 		<key>FXScopeArrayOfPaths</key>
 		<array>
-			<string>kMDQueryScopeComputer</string>
+			<string>/Users/luomat/Dropbox</string>
 		</array>
 	</dict>
 	<key>SuggestedAttributes</key>
@@ -85,7 +89,7 @@
 					<key>visible</key>
 					<true/>
 					<key>width</key>
-					<integer>759</integer>
+					<integer>543</integer>
 				</dict>
 				<dict>
 					<key>ascending</key>
@@ -103,7 +107,7 @@
 					<key>identifier</key>
 					<string>dateCreated</string>
 					<key>visible</key>
-					<false/>
+					<true/>
 					<key>width</key>
 					<integer>181</integer>
 				</dict>
@@ -113,19 +117,19 @@
 					<key>identifier</key>
 					<string>size</string>
 					<key>visible</key>
-					<true/>
+					<false/>
 					<key>width</key>
 					<integer>97</integer>
 				</dict>
 				<dict>
 					<key>ascending</key>
-					<false/>
+					<true/>
 					<key>identifier</key>
 					<string>kind</string>
 					<key>visible</key>
 					<true/>
 					<key>width</key>
-					<integer>261</integer>
+					<integer>115</integer>
 				</dict>
 				<dict>
 					<key>ascending</key>
@@ -183,7 +187,7 @@
 			<key>showIconPreview</key>
 			<true/>
 			<key>sortColumn</key>
-			<string>dateLastOpened</string>
+			<string>name</string>
 			<key>textSize</key>
 			<real>12</real>
 			<key>useRelativeDates</key>
@@ -215,7 +219,7 @@
 					<key>index</key>
 					<integer>2</integer>
 					<key>visible</key>
-					<false/>
+					<true/>
 					<key>width</key>
 					<integer>181</integer>
 				</dict>
@@ -244,13 +248,13 @@
 				<key>kind</key>
 				<dict>
 					<key>ascending</key>
-					<false/>
+					<true/>
 					<key>index</key>
 					<integer>4</integer>
 					<key>visible</key>
 					<true/>
 					<key>width</key>
-					<integer>261</integer>
+					<integer>115</integer>
 				</dict>
 				<key>label</key>
 				<dict>
@@ -272,7 +276,7 @@
 					<key>visible</key>
 					<true/>
 					<key>width</key>
-					<integer>759</integer>
+					<integer>543</integer>
 				</dict>
 				<key>size</key>
 				<dict>
@@ -281,7 +285,7 @@
 					<key>index</key>
 					<integer>3</integer>
 					<key>visible</key>
-					<true/>
+					<false/>
 					<key>width</key>
 					<integer>97</integer>
 				</dict>
@@ -302,7 +306,7 @@
 			<key>showIconPreview</key>
 			<true/>
 			<key>sortColumn</key>
-			<string>dateLastOpened</string>
+			<string>name</string>
 			<key>textSize</key>
 			<real>12</real>
 			<key>useRelativeDates</key>
@@ -312,18 +316,22 @@
 		</dict>
 		<key>WindowState</key>
 		<dict>
+			<key>ContainerShowSidebar</key>
+			<true/>
 			<key>ShowPathbar</key>
 			<true/>
 			<key>ShowSidebar</key>
 			<true/>
 			<key>ShowStatusBar</key>
 			<true/>
+			<key>ShowTabView</key>
+			<false/>
 			<key>ShowToolbar</key>
 			<true/>
 			<key>SidebarWidth</key>
-			<integer>162</integer>
+			<integer>0</integer>
 			<key>WindowBounds</key>
-			<string>{{191, 0}, {1363, 878}}</string>
+			<string>{{61, 4}, {1379, 874}}</string>
 		</dict>
 	</dict>
 </dict>
